@@ -1,0 +1,9 @@
+name: test
+description: "Учебный тестовый стенд. Здесь разрабатываешь и отлаживаешь."
+allow_direct_write: true
+paths:
+  root: stands/test
+  raw: stands/test/data/raw
+  staging: stands/test/data/staging
+  curated: stands/test/data/curated
+  run_logs: stands/test/run_logs

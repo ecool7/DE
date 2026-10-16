@@ -1,0 +1,9 @@
+name: prod
+description: "Учебный прод-стенд. Писать только через scripts/release_to_prod.py"
+allow_direct_write: false
+paths:
+  root: stands/prod
+  raw: stands/prod/data/raw
+  staging: stands/prod/data/staging
+  curated: stands/prod/data/curated
+  run_logs: stands/prod/run_logs

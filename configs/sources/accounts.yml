@@ -1,0 +1,37 @@
+source:
+  name: abs_accounts
+  system: "ABS (synthetic)"
+  entity: accounts
+  format: csv
+  path_pattern: "stands/{env}/data/raw/dt={business_dt}/accounts.csv"
+  load_frequency: daily
+
+columns:
+  - name: account_id
+    type: string
+    required: true
+  - name: client_id
+    type: string
+    required: true
+  - name: account_type
+    type: string
+    required: true
+    description: "current | deposit | loan_tech"
+  - name: currency
+    type: string
+    required: true
+  - name: open_date
+    type: date
+    required: true
+  - name: close_date
+    type: date
+    required: false
+  - name: status
+    type: string
+    required: true
+  - name: balance_amount
+    type: decimal
+    required: true
+  - name: updated_at
+    type: timestamp
+    required: true

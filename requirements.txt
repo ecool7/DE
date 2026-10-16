@@ -1,0 +1,17 @@
+pandas>=2.2.0
+pyarrow>=15.0.0
+python-dateutil>=2.9.0
+PyYAML>=6.0.1
+# Месяц 2+
+# psycopg2-binary>=2.9.9
+# sqlalchemy>=2.0.0
+# Месяц 3+
+# apache-airflow — ставить отдельно по гайду недели
+# Месяц 4+
+# dbt-core / dbt-postgres — по гайду недели
+# Удобно для ad-hoc SQL по файлам (месяц 1)
+duckdb>=1.0.0
+# Ops Console (визуальный стенд)
+streamlit>=1.32.0
+# Тесты данных / unit (вакансия: data testing as code)
+pytest>=8.0.0

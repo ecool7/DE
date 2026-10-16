@@ -1,0 +1,66 @@
+# Контракт источника: клиенты (выгрузка из CRM / АБС)
+# Ученик: дополни своими наблюдениями после профилирования (RSHB-003)
+
+source:
+  name: abs_clients
+  system: "ABS/CRM (synthetic)"
+  entity: clients
+  format: csv
+  encoding: utf-8
+  delimiter: ","
+  path_pattern: "stands/{env}/data/raw/dt={business_dt}/clients.csv"
+  load_frequency: daily
+  timezone: "Europe/Moscow"
+
+columns:
+  - name: client_id
+    type: string
+    required: true
+    description: "BK клиента"
+  - name: client_type
+    type: string
+    required: true
+    description: "FL | KFH | OOO"
+  - name: full_name
+    type: string
+    required: true
+  - name: inn
+    type: string
+    required: false
+    description: "для FL может быть пусто"
+  - name: birth_date
+    type: date
+    required: false
+    description: "YYYY-MM-DD; для юрлиц пусто"
+  - name: region_code
+    type: string
+    required: true
+  - name: region_name
+    type: string
+    required: true
+  - name: branch_id
+    type: string
+    required: true
+  - name: segment
+    type: string
+    required: true
+    description: "retail | agro_small | agro_mid | agro_large"
+  - name: email
+    type: string
+    required: false
+  - name: phone
+    type: string
+    required: false
+  - name: registered_at
+    type: timestamp
+    required: true
+  - name: is_active
+    type: boolean
+    required: true
+  - name: updated_at
+    type: timestamp
+    required: true
+
+# Твои заметки после RSHB-003:
+notes: |
+  (заполни)

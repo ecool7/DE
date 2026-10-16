@@ -1,0 +1,14 @@
+---
+description: Правила работы с task-manager и спринтами
+globs: tasks/**
+alwaysApply: false
+---
+
+# Task files conventions
+
+- `CURRENT_SPRINT.md` — единственная актуальная доска.
+- Статусы: `To Do` | `In Progress` | `In Review` | `Done` | `Blocked`.
+- Id тикетов монотонно растут: RSHB-001, RSHB-002, ...
+- В `TASK_MANAGER.md` новые review request добавляются **сверху** секции.
+- Архив спринтов не удалять; только дополнять.
+- Не хранить секреты/пароли в tasks/.

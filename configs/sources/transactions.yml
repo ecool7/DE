@@ -1,0 +1,40 @@
+source:
+  name: card_transactions
+  system: "Card processing (synthetic)"
+  entity: transactions
+  format: csv
+  path_pattern: "stands/{env}/data/raw/dt={business_dt}/transactions.csv"
+  load_frequency: daily
+
+columns:
+  - name: txn_id
+    type: string
+    required: true
+  - name: account_id
+    type: string
+    required: true
+  - name: client_id
+    type: string
+    required: true
+  - name: txn_ts
+    type: timestamp
+    required: true
+  - name: amount
+    type: decimal
+    required: true
+  - name: currency
+    type: string
+    required: true
+  - name: direction
+    type: string
+    required: true
+    description: "debit | credit"
+  - name: mcc
+    type: string
+    required: false
+  - name: description
+    type: string
+    required: false
+  - name: branch_id
+    type: string
+    required: false
